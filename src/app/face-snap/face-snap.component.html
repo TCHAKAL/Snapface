@@ -1,0 +1,11 @@
+<div class="face-snap-card">
+  <h2>{{ title }}</h2>
+  <p>Mis en ligne le {{ dateCreation }}</p>
+  <img [src]="imageUrl" [alt]="title"/>
+  <p>{{ description }}</p>
+  <p>
+    <button (click)="onAddSnap()"  [hidden]="isUserSnapped"> Snap !</button>
+    <button (click)="onCancelSnap()"  [hidden]="!isUserSnapped"> Retirer !</button>
+    🤌 {{ snaps }}
+  </p>
+</div>

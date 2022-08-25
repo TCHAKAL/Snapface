@@ -8,14 +8,35 @@ import {FaceSnapModel} from "./models/face-snap-model";
 })
 export class AppComponent implements OnInit {
 
-   mySnapModel!: FaceSnapModel;
-   mySnapModel2!: FaceSnapModel;
-   mySnapModel3!: FaceSnapModel;
+  mySnapModel!: FaceSnapModel;
+  mySnapModel2!: FaceSnapModel;
+  mySnapModel3!: FaceSnapModel;
 
   ngOnInit() {
-    this.mySnapModel= new FaceSnapModel('DOG', 'A random picture matching the keyword dog, of 320 x 240 pixels', new Date(), 0, 'https://loremflickr.com/320/240/dog');
-    this.mySnapModel2= new FaceSnapModel('PARIS', 'A random picture matching the keywords paris and girl', new Date(), 0, 'https://loremflickr.com/g/320/240/paris');
-    this.mySnapModel3= new FaceSnapModel('BRAZIL', ' A random picture matching the keywords brazil or rio.', new Date(), 0, 'https://loremflickr.com/320/240/brazil,rio');
+    this.mySnapModel = {
+      title: 'Archibald',
+      description: 'Mon meilleur ami depuis tout petit !',
+      imageUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
+      dateCreation: new Date(),
+      snaps: 6,
+    };
+
+    this.mySnapModel2 = {
+      title: 'Three Rock Mountain',
+      description: 'Un endroit magnifique pour les randonnées.',
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Three_Rock_Mountain_Southern_Tor.jpg/2880px-Three_Rock_Mountain_Southern_Tor.jpg',
+      dateCreation: new Date(),
+      snaps: 0,
+      location: 'Paris'
+    };
+
+    this.mySnapModel3 = {
+      title: 'Un bon repas',
+      description: 'Mmmh que c\'est bon !',
+      imageUrl: 'https://wtop.com/wp-content/uploads/2020/06/HEALTHYFRESH.jpg',
+      dateCreation: new Date(),
+      snaps: 0,
+    };
   }
 }
 

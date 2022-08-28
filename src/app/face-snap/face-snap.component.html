@@ -6,7 +6,7 @@
   <p>{{ faceSnapModel.description }}</p>
   <p>
     <button (click)="onSnap()" > {{buttonText}}</button>
-     🤌 {{ faceSnapModel.snaps }}
+    <span [ngStyle]="{color : 'rgb(0,'+faceSnapModel.snaps+',0)'}">🤌 {{ faceSnapModel.snaps }}</span>
   </p>
 
 </div>

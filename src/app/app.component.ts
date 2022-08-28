@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       description: 'Mon meilleur ami depuis tout petit !',
       imageUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
       dateCreation: new Date(),
-      snaps: 6,
+      snaps: 120,
     };
 
     this.mySnapModel2 = {
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
       description: 'Un endroit magnifique pour les randonnées.',
       imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Three_Rock_Mountain_Southern_Tor.jpg/2880px-Three_Rock_Mountain_Southern_Tor.jpg',
       dateCreation: new Date(),
-      snaps: 1,
+      snaps: 255,
       location: 'Paris'
     };
 
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
       description: 'Mmmh que c\'est bon !',
       imageUrl: 'https://wtop.com/wp-content/uploads/2020/06/HEALTHYFRESH.jpg',
       dateCreation: new Date(),
-      snaps: 0,
+      snaps: 10,
     };
     this.faceSnaps = [
       this.mySnapModel,this.mySnapModel2,this.mySnapModel3

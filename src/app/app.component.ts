@@ -7,7 +7,7 @@ import {FaceSnapModel} from "./models/face-snap-model";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
+  faceSnaps !: FaceSnapModel[];
   mySnapModel!: FaceSnapModel;
   mySnapModel2!: FaceSnapModel;
   mySnapModel3!: FaceSnapModel;
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
       description: 'Un endroit magnifique pour les randonnées.',
       imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Three_Rock_Mountain_Southern_Tor.jpg/2880px-Three_Rock_Mountain_Southern_Tor.jpg',
       dateCreation: new Date(),
-      snaps: 0,
+      snaps: 1,
       location: 'Paris'
     };
 
@@ -37,6 +37,9 @@ export class AppComponent implements OnInit {
       dateCreation: new Date(),
       snaps: 0,
     };
+    this.faceSnaps = [
+      this.mySnapModel,this.mySnapModel2,this.mySnapModel3
+    ]
   }
 }
 

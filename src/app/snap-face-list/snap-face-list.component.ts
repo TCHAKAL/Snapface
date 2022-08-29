@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FaceSnapModel} from "../models/face-snap-model";
 import {FaceSnapService} from "../service/face-snap-service";
 
@@ -13,7 +13,7 @@ export class SnapFaceListComponent implements OnInit {
   constructor(private faceSnapService : FaceSnapService) { }
 
   ngOnInit(): void {
-    this.faceSnaps =this.faceSnapService.faceSnaps;
+    this.faceSnaps =this.faceSnapService.getAllFaceSnaps();
   }
 
 }

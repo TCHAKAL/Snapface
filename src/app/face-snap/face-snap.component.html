@@ -1,4 +1,4 @@
-<div class="face-snap-card" [ngClass]="{snapped :buttonText==='Retirer !'}">
+<div class="face-snap-card" [ngClass]="{snapped :buttonText==='Unsnap !'}">
   <h2>{{ faceSnapModel.title | titlecase }}</h2>
   <p *ngIf="faceSnapModel.location">Photo prise à {{faceSnapModel.location}}</p>
   <p>Mis en ligne le {{ faceSnapModel.dateCreation | date:'longDate' }}</p>

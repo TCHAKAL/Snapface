@@ -6,16 +6,20 @@ import { AppComponent } from './app.component';
 import { FaceSnapComponent } from './face-snap/face-snap.component';
 import { SnapFaceListComponent } from './snap-face-list/snap-face-list.component';
 import { HeaderComponent } from './header/header.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FaceSnapComponent,
     SnapFaceListComponent,
-    HeaderComponent
+    HeaderComponent,
+    LandingPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [
     {provide:LOCALE_ID,useValue:'fr-FR'}

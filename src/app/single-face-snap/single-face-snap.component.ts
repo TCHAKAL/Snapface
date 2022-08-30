@@ -14,7 +14,7 @@ export class SingleFaceSnapComponent implements OnInit {
 
   buttonText !: String;
 
-  constructor(private faceSnapService: FaceSnapService, private route:ActivatedRoute) {
+  constructor(private faceSnapService: FaceSnapService, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -25,10 +25,10 @@ export class SingleFaceSnapComponent implements OnInit {
 
   onSnap() {
     if (this.buttonText == 'Snap !') {
-      this.faceSnapService.onSnapFaceSnapById(this.faceSnapModel.id,"Snap");
+      this.faceSnapService.onSnapFaceSnapById(this.faceSnapModel.id, "Snap");
       this.buttonText = 'Unsnap !'
     } else {
-      this.faceSnapService.onSnapFaceSnapById(this.faceSnapModel.id,"Unsnap");
+      this.faceSnapService.onSnapFaceSnapById(this.faceSnapModel.id, "Unsnap");
       this.buttonText = 'Snap !'
     }
   }

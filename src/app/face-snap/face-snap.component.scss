@@ -19,14 +19,16 @@
   }
 
 
-
 }
+
 .snapped {
   background-color: rgba(lightgreen, 0.4);
   color: darkgreen;
+
   button {
     box-shadow: lightgreen 3px 3px 7px;
     color: crimson;
+
     &:active {
       box-shadow: lightgreen 0 0 5px;
     }

@@ -4,7 +4,7 @@ export class FaceSnapModel {
   description!: string;
   dateCreation!: Date;
   snaps!: number;
-  imageUrl! : string;
+  imageUrl!: string;
   location?: string; //? ca veut dire optional
 
 

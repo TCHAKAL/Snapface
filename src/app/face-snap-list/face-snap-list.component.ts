@@ -8,12 +8,14 @@ import {FaceSnapService} from "../service/face-snap-service";
   styleUrls: ['./face-snap-list.component.scss']
 })
 export class FaceSnapListComponent implements OnInit {
-  faceSnaps!:FaceSnapModel[];
+  faceSnaps!: FaceSnapModel[];
+
   //Dependency injection de Angular
-  constructor(private faceSnapService : FaceSnapService) { }
+  constructor(private faceSnapService: FaceSnapService) {
+  }
 
   ngOnInit(): void {
-    this.faceSnaps =this.faceSnapService.getAllFaceSnaps();
+    this.faceSnaps = this.faceSnapService.getAllFaceSnaps();
   }
 
 }

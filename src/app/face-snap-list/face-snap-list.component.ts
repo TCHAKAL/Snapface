@@ -3,11 +3,11 @@ import {FaceSnapModel} from "../models/face-snap-model";
 import {FaceSnapService} from "../service/face-snap-service";
 
 @Component({
-  selector: 'app-snap-face-list',
-  templateUrl: './snap-face-list.component.html',
-  styleUrls: ['./snap-face-list.component.scss']
+  selector: 'app-face-snap-list',
+  templateUrl: './face-snap-list.component.html',
+  styleUrls: ['./face-snap-list.component.scss']
 })
-export class SnapFaceListComponent implements OnInit {
+export class FaceSnapListComponent implements OnInit {
   faceSnaps!:FaceSnapModel[];
   //Dependency injection de Angular
   constructor(private faceSnapService : FaceSnapService) { }

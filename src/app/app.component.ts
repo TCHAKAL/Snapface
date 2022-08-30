@@ -7,11 +7,10 @@ import {interval, Observable} from "rxjs";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  interval$!: Observable<number>;
 
   ngOnInit() {
-    const interval$ = interval(1000);
-    interval$.subscribe(value => console.log("1ere instance "+value));
-    setTimeout(()=> interval$.subscribe(value => console.log("2eme instance "+value)),3000);
+    this.interval$ = interval(1000);
   }
 }
 

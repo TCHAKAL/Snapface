@@ -26,9 +26,10 @@ export class AppComponent implements OnInit {
 
   //interval$!: Observable<string>;
 
+  // Cas des observables haut niveau
   ngOnInit() {
     interval(500).pipe(
-      take(10),
+      take(3),//combien d'itération
       map(value => value % 2 === 0 ? 'rouge' : 'jaune'),
       tap(color => console.log(`La lumière s'allume en %c${color}`, `color: ${this.translateColor(color)}`)),
       //mergeMap(color => this.getTrainObservable$(color)),assure la mise en parallèle : l'Observable extérieur peut souscrire aux Observables intérieurs suivants sans attendre que les précédents soient complétés.
@@ -38,7 +39,8 @@ export class AppComponent implements OnInit {
       tap(train => console.log(`Train %c${train.color} ${train.trainIndex} arrivé !`, `font-weight: bold; color: ${this.translateColor(train.color)}`))
     ).subscribe();
   }
-
+  // Cas des observables bas niveau
+  //ngOnInit() {
   // this.interval$ = interval(1000).pipe(
   //   filter(value => value % 3 === 0),
   //   map(value => value % 2 === 0 ?

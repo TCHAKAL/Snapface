@@ -11,7 +11,7 @@ export class FaceSnapService {
       title: 'Archibald',
       description: 'Mon meilleur ami depuis tout petit !',
       imageUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
-      dateCreation: new Date(),
+      createdDate: new Date(),
       snaps: 120,
     },
     {
@@ -19,7 +19,7 @@ export class FaceSnapService {
       title: 'Three Rock Mountain',
       description: 'Un endroit magnifique pour les randonnées.',
       imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Three_Rock_Mountain_Southern_Tor.jpg/2880px-Three_Rock_Mountain_Southern_Tor.jpg',
-      dateCreation: new Date(),
+      createdDate: new Date(),
       snaps: 255,
       location: 'Paris'
     }
@@ -28,7 +28,7 @@ export class FaceSnapService {
       title: 'Un bon repas',
       description: 'Mmmh que c\'est bon !',
       imageUrl: 'https://wtop.com/wp-content/uploads/2020/06/HEALTHYFRESH.jpg',
-      dateCreation: new Date('01/12/1993'),
+      createdDate: new Date('01/12/1993'),
       snaps: 10,
     }
   ];
@@ -74,7 +74,7 @@ export class FaceSnapService {
       ...formValue,
       id:this.faceSnaps[this.faceSnaps.length-1].id+1,
       snaps:0,
-      dateCreation:new Date()
+      createdDate:new Date()
     };
     this.faceSnaps.push(newFaceSnap);
   }

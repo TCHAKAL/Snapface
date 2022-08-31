@@ -2,7 +2,7 @@
   <a routerLink="/facesnaps">Retour</a>
   <h2>{{ faceSnapModel.title | titlecase }}</h2>
   <p *ngIf="faceSnapModel.location">Photo prise à {{faceSnapModel.location}}</p>
-  <p>Mis en ligne le {{ faceSnapModel.dateCreation | date:'longDate' }}</p>
+  <p>Mis en ligne le {{ faceSnapModel.createdDate | date:'longDate' }}</p>
   <img [src]="faceSnapModel.imageUrl" [alt]="faceSnapModel.title"/>
   <p>{{ faceSnapModel.description }}</p>
   <p>

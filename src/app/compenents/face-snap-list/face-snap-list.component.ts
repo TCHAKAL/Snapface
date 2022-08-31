@@ -11,13 +11,15 @@ import {tap} from "rxjs/operators";
 })
 export class FaceSnapListComponent implements OnInit,OnDestroy {
   faceSnaps!: FaceSnapModel[];
+  faceSnaps$!: Observable<FaceSnapModel[]>;
   destroy$!: Subject<boolean>;
   //Dependency injection de Angular
   constructor(private faceSnapService: FaceSnapService) {
   }
 
   ngOnInit(): void {
-    this.faceSnaps = this.faceSnapService.getAllFaceSnaps();
+    this.faceSnaps$ = this.faceSnapService.getAllFaceSnaps();
+
     this.destroy$ = new Subject<boolean>();
     interval(1000).pipe(
       takeUntil(this.destroy$),

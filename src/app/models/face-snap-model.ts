@@ -2,9 +2,9 @@ export class FaceSnapModel {
   id!: number;
   title!: string;
   description!: string;
+  imageUrl!: string;
   createdDate!: Date;
   snaps!: number;
-  imageUrl!: string;
   location?: string; //? ca veut dire optional
 
 

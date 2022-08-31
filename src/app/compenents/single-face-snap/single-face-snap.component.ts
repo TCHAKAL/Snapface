@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FaceSnapModel} from "../../models/face-snap-model";
 import {FaceSnapService} from "../../services/face-snap-service";
 import {ActivatedRoute} from "@angular/router";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-single-face-snap',
@@ -10,7 +11,8 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class SingleFaceSnapComponent implements OnInit {
 
-  faceSnapModel !: FaceSnapModel;
+  //faceSnapModel !: FaceSnapModel;
+  faceSnapModel$ !:Observable<FaceSnapModel> ;
 
   buttonText !: String;
 
@@ -20,15 +22,15 @@ export class SingleFaceSnapComponent implements OnInit {
   ngOnInit() {
     this.buttonText = 'Snap !';
     const faceSnapId = +this.route.snapshot.params['id'];// le + pour transformer la chaine en nombre
-    this.faceSnapModel = this.faceSnapService.getFaceSnapById(faceSnapId);
+    this.faceSnapModel$ = this.faceSnapService.getFaceSnapById(faceSnapId);
   }
 
   onSnap() {
     if (this.buttonText == 'Snap !') {
-      this.faceSnapService.onSnapFaceSnapById(this.faceSnapModel.id, "Snap");
+    //  this.faceSnapService.onSnapFaceSnapById(this.faceSnapModel.id, "Snap");
       this.buttonText = 'Unsnap !'
     } else {
-      this.faceSnapService.onSnapFaceSnapById(this.faceSnapModel.id, "Unsnap");
+    //  this.faceSnapService.onSnapFaceSnapById(this.faceSnapModel.id, "Unsnap");
       this.buttonText = 'Snap !'
     }
   }

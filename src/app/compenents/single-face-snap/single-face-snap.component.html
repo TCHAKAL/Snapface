@@ -1,17 +1,22 @@
-<div class="face-snap-card" [ngClass]="{snapped :buttonText==='Unsnap !'}">
+<div class="face-snap-card"
+     [ngClass]="{snapped :buttonText==='Unsnap !'}"
+     *ngIf="faceSnapModel$|async as faceSnapModel">
+
   <a routerLink="/facesnaps">Retour</a>
+
   <h2>{{ faceSnapModel.title | titlecase }}</h2>
+
   <p *ngIf="faceSnapModel.location">Photo prise à {{faceSnapModel.location}}</p>
+
   <p>Mis en ligne le {{ faceSnapModel.createdDate | date:'longDate' }}</p>
+
   <img [src]="faceSnapModel.imageUrl" [alt]="faceSnapModel.title"/>
+
   <p>{{ faceSnapModel.description }}</p>
+
   <p>
     <button (click)="onSnap()"> {{buttonText}}</button>
     <span [ngStyle]="{color : 'rgb(0,'+faceSnapModel.snaps+',0)'}">🤌 {{ faceSnapModel.snaps }} </span>
   </p>
-  <p>
-    Viewers {{ 4346234.36 | number:'1.0-0'}} K qui vaut {{0.33 | percent:'1.0-2'}} des abbonnées
-  </p>
-  <p> Prix de vente : {{366 | currency:'EUR'}} </p>
 
 </div>

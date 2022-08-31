@@ -10,9 +10,9 @@ import {tap} from "rxjs/operators";
   styleUrls: ['./face-snap-list.component.scss']
 })
 export class FaceSnapListComponent implements OnInit,OnDestroy {
-  faceSnaps!: FaceSnapModel[];
   faceSnaps$!: Observable<FaceSnapModel[]>;
   destroy$!: Subject<boolean>;
+
   //Dependency injection de Angular
   constructor(private faceSnapService: FaceSnapService) {
   }

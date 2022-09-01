@@ -12,6 +12,7 @@ import {SingleFaceSnapComponent} from './compenents/single-face-snap/single-face
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NewFaceSnapComponent } from './compenents/new-face-snap/new-face-snap.component';
 import {HttpClientModule} from "@angular/common/http";
+import {httpInterceptorProvider} from "./interceptors";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule
   ],
   providers: [
-    {provide: LOCALE_ID, useValue: 'fr-FR'}
+    {provide: LOCALE_ID, useValue: 'fr-FR'},
+    httpInterceptorProvider
   ],
   bootstrap: [AppComponent]
 })

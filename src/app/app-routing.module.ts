@@ -4,7 +4,7 @@ import {LandingPageComponent} from "./landing-page/components/landing-page/landi
 
 const routes: Routes = [
   {path:'facesnaps',loadChildren:()=> import('./face-snaps/face-snaps.module').then(m=>m.FaceSnapsModule)},
-  {path:'login',loadChildren:()=> import('./authentication/authentication.module').then(m=>m.AuthenticationModule)},
+  {path:'auth',loadChildren:()=> import('./authentication/authentication.module').then(m=>m.AuthenticationModule)},
   {path: '', component: LandingPageComponent},
 ];
 

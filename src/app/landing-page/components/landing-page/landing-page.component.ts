@@ -8,6 +8,7 @@ import {NgForm} from "@angular/forms";
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+
   userEmail= 'ahmed.tchakal@gmail.com';
 
   constructor(private rooter: Router) {
